@@ -9,6 +9,8 @@ const urlProxy = process.env.PorxyImage || "http://localhost:2404/";
 
 const app = express();
 
+console.log('Proxy Url', urlProxy)
+
 app.get("/", async (req, res) => {
     if (req.url === "/") {
         res.send("You need add url request!");
