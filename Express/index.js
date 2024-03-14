@@ -1,8 +1,11 @@
 import express from "express";
 import fetch from "node-fetch";
+import dotenv from "dotenv";
+dotenv.config();
+
 
 const PORT = 1309;
-const urlProxy = "http://localhost:2404/";
+const urlProxy = process.env.PorxyImage || "http://localhost:2404/";
 
 const app = express();
 
